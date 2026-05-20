@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio — Gestión de la Innovación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
 <!-- ══════════════ HEADER ══════════════ -->
 <header>
+  <div class="header-monogram">JC</div>
   <p class="institution">Universidad Autónoma de Baja California</p>
   <h1>Portafolio — Gestión de la Innovación</h1>
   <p class="subtitle">
@@ -21,6 +24,16 @@
     <a href="#ficha" class="btn-outline">Ficha académica</a>
   </div>
 </header>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="site-nav" aria-label="Secciones del portafolio">
+  <div class="nav-inner">
+    <a href="#ficha"          class="nav-link">Ficha</a>
+    <a href="#practicas"      class="nav-link">Prácticas</a>
+    <a href="#proyecto-final" class="nav-link">Proyecto Final</a>
+    <a href="#referencias"    class="nav-link">Referencias</a>
+  </div>
+</nav>
 
 <!-- ══════════════ MAIN ══════════════ -->
 <main>
@@ -374,6 +387,14 @@
         </a>
       </div>
 
+      <!--
+        PENDIENTE — código fuente
+        Cuando tengas el link del repositorio:
+          1. Reemplaza "TU_LINK_AQUI" con la URL real
+          2. Quita la clase  practice-card--disabled  del <div>
+          3. Quita la clase  btn-open--disabled        del <a>
+          4. Elimina el <span class="tag warning">
+      -->
       <div class="practice-card practice-card--disabled">
         <div class="practice-meta">
           <div class="practice-tags">
@@ -383,10 +404,10 @@
           <h3>Código fuente — Repositorio del proyecto</h3>
           <p class="desc">Repositorio con el código fuente y recursos de la aplicación desarrollada para el sistema.</p>
         </div>
-        <span class="btn-open btn-open--disabled">
+        <a href="TU_LINK_AQUI" target="_blank" rel="noopener" class="btn-open btn-open--disabled">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Abrir
-        </span>
+        </a>
       </div>
 
     </div>
@@ -501,5 +522,7 @@
   Universidad Autónoma de Baja California &nbsp;·&nbsp; Facultad de Ciencias Químicas e Ingeniería &nbsp;·&nbsp; 2026
 </footer>
 
+<button class="btn-top-fixed" id="btn-top-fixed" aria-label="Volver arriba" onclick="scrollToTop()">↑</button>
+<script src="js/main.js"></script>
 </body>
 </html>
